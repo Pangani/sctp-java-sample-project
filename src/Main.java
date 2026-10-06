@@ -30,6 +30,10 @@ public class Main {
            System.out.println("Beneficiary not found...");
        }
 
+       if (payment1.isPaid()){
+           System.out.println("Payment Completed...");
+       }
+
 
 //       service.displayAllBeneficiaries();
     }

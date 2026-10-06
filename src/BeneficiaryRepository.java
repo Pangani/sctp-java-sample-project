@@ -1,15 +1,17 @@
 import java.util.ArrayList;
 
-public class BeneficiaryRepository {
-    private ArrayList<Beneficiary> beneficiaries = new ArrayList<>();
+public class BeneficiaryRepository
+    implements BeneficiaryRepositoryInterface {
 
-//    save a beneficiary
-    public void save(Beneficiary beneficiary) {
-        beneficiaries.add(beneficiary);
-    }
+        private ArrayList<Beneficiary> beneficiaries = new ArrayList<>();
 
-//    return all beneficiaries
-    public ArrayList<Beneficiary> findAll(){
-        return beneficiaries;
+    //    save a beneficiary
+        public void save(Beneficiary beneficiary) {
+            beneficiaries.add(beneficiary);
+        }
+
+    //    return all beneficiaries
+        public ArrayList<Beneficiary> findAll(){
+            return beneficiaries;
     }
 }

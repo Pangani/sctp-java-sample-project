@@ -1,8 +1,8 @@
 public class BeneficiaryService {
-    private BeneficiaryRepository repository;
+    private BeneficiaryRepositoryInterface repository;
 
     // setter
-    public BeneficiaryService(BeneficiaryRepository repository){
+    public BeneficiaryService(BeneficiaryRepositoryInterface repository){
         this.repository = repository;
     }
 
