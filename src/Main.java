@@ -4,8 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Beneficiary beneficiary2 = new Beneficiary("Grace Phiri",
+                "5556677",
+                "Karonga",
+                7);
+
         BeneficiaryRepository repository = new BeneficiaryRepository();
         BeneficiaryService service = new BeneficiaryService(repository);
+        Payment payment1 = new Payment(beneficiary2, "Cycle 3", 50000, PaymentStatus.PAID);
 
         try {
             Beneficiary beneficiary1 = new Beneficiary(
@@ -15,13 +21,6 @@ public class Main {
         }
 
 
-        Beneficiary beneficiary2 = new Beneficiary("Grace Phiri",
-                "5556677",
-                "Karonga",
-                7);
-
-
-       service.registerBeneficiary(beneficiary1);
        service.registerBeneficiary(beneficiary2);
        Beneficiary beneficiaryByID = service.findBeneficiaryByNationalId("5556677");
 
